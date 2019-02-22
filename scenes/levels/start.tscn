@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://tilemap/new_tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://scenes/bodies/player/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/bodies/trap_1/trap_1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/bodies/next_level/next_level.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/0.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/bodies/coin/coin.tscn" type="PackedScene" id=6]
+
+[node name="-" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( -65536, 1610612739, 0, -65535, 1610612736, 0, -65534, 1610612736, 0, -65533, 1610612736, 0, -65532, -1073741821, 0, 0, -1610612736, 0, 4, -1073741824, 0, 65536, -1610612736, 0, 65540, -1073741823, 0, 65541, 1610612736, 0, 65542, -1073741821, 0, 131072, -1610612736, 0, 131078, -1073741824, 0, 196608, -1610612736, 0, 196614, -1073741823, 0, 196615, -1073741821, 0, 196618, 1610612739, 0, 196619, 1610612736, 0, 196620, 1610612736, 0, 196621, 1610612736, 0, 196622, 1610612736, 0, 196623, 1610612736, 0, 196624, -1073741821, 0, 262144, -1610612736, 0, 262151, -1073741823, 0, 262152, -1073741821, 0, 262154, -1610612736, 0, 262160, -1073741823, 0, 262161, 1610612736, 0, 262162, 1610612736, 0, 262163, 1610612736, 0, 262164, 1610612736, 0, 262165, 1610612736, 0, 262166, -1073741821, 0, 327680, -1610612736, 0, 327688, -1073741823, 0, 327689, 1610612736, 0, 327690, 1610612737, 0, 327702, -1073741824, 0, 393216, -1610612736, 0, 393238, -1073741824, 0, 458752, -1610612736, 0, 458774, -1073741824, 0, 524288, -1610612736, 0, 524310, -1073741823, 0, 524311, 1610612736, 0, 524312, 1610612736, 0, 524313, 1610612736, 0, 524314, 1610612736, 0, 524315, 1610612736, 0, 524316, -1073741821, 0, 589824, -1610612736, 0, 589852, -1073741824, 0, 655360, -1610612736, 0, 655388, -1073741823, 0, 655389, -1073741821, 0, 720896, -1610612736, 0, 720925, -1073741823, 0, 720926, -1073741821, 0, 786432, -1610612736, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786462, -1073741824, 0, 851968, -1610612736, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851998, -1073741823, 0, 851999, 1610612736, 0, 852000, -1073741821, 0, 917504, -1610612733, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, -1610612735, 0, 917536, -1073741824, 0, 983055, -1610612733, 0, 983056, -1610612735, 0, 983072, -1073741824, 0, 1048592, -1610612733, 0, 1048593, -1610612735, 0, 1048608, -1073741824, 0, 1114129, -1610612733, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114144, 3, 0 )
+_sections_unfolded = [ "Cell" ]
+
+[node name="jugador" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 31.8744, 20.169 )
+
+[node name="puas" type="Node" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="pua" parent="puas" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 192, 208 )
+
+[node name="next_level" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 504, 232 )
+next_level = ExtResource( 5 )
+
+[node name="moneda" parent="." index="4" instance=ExtResource( 6 )]
+
+position = Vector2( 160, 176 )
+
+[node name="moneda2" parent="." index="5" instance=ExtResource( 6 )]
+
+position = Vector2( 400, 256 )
+
+[node name="moneda3" parent="." index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 416, 256 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="7"]
+
+anchor_mode = 0
+rotating = false
+current = false
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+
