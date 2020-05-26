@@ -8,425 +8,293 @@
 [ext_resource path="res://scenes/bodies/next_level/next_level.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/levels/6.tscn" type="PackedScene" id=7]
 
-[node name="5" type="Node" index="0"]
+[node name="5" type="Node"]
 
-[node name="TileMap" type="TileMap" parent="." index="0"]
-
-mode = 0
+[node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
-cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( 131071, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 4, 0, 65558, 4, 0, 65559, 4, 0, 65560, 4, 0, 65561, 4, 0, 65562, 4, 0, 65563, 4, 0, 65564, 4, 0, 65565, 4, 0, 65566, 4, 0, 65567, 4, 0, 131103, 4, 0, 196639, 4, 0, 262148, 8, 0, 262157, 536870920, 0, 262159, 8, 0, 262168, 536870920, 0, 262175, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 5, 0, 327682, 5, 0, 327683, 5, 0, 327684, 5, 0, 327685, 5, 0, 327686, 5, 0, 327687, 5, 0, 327688, 5, 0, 327689, 5, 0, 327690, 5, 0, 327691, 5, 0, 327692, 5, 0, 327693, 5, 0, 327694, 5, 0, 327695, 5, 0, 327696, 5, 0, 327697, 5, 0, 327698, 5, 0, 327699, 5, 0, 327700, 5, 0, 327701, 5, 0, 327702, 5, 0, 327703, 5, 0, 327704, 5, 0, 327705, 5, 0, 327706, 5, 0, 327711, 4, 0, 393216, 4, 0, 393243, 5, 0, 393247, 4, 0, 458752, 4, 0, 458783, 4, 0, 524288, 4, 0, 524294, 8, 0, 524301, 536870920, 0, 524304, 8, 0, 524311, 536870920, 0, 524319, 4, 0, 589824, 4, 0, 589829, 5, 0, 589830, 5, 0, 589831, 5, 0, 589832, 5, 0, 589833, 5, 0, 589834, 5, 0, 589835, 5, 0, 589836, 5, 0, 589837, 5, 0, 589838, 5, 0, 589839, 5, 0, 589840, 5, 0, 589841, 5, 0, 589842, 5, 0, 589843, 5, 0, 589844, 5, 0, 589845, 5, 0, 589846, 5, 0, 589847, 5, 0, 589848, 5, 0, 589849, 5, 0, 589850, 5, 0, 589851, 5, 0, 589852, 5, 0, 589853, 5, 0, 589854, 5, 0, 589855, 4, 0, 655360, 4, 0, 655364, 5, 0, 655391, 4, 0, 720896, 4, 0, 720927, 4, 0, 786432, 4, 0, 786438, 8, 0, 786445, 536870920, 0, 786448, 8, 0, 786455, 536870920, 0, 786463, 4, 0, 917503, 4, 0, 851968, 4, 0, 851969, 5, 0, 851970, 5, 0, 851971, 5, 0, 851972, 5, 0, 851973, 5, 0, 851974, 5, 0, 851975, 5, 0, 851976, 5, 0, 851977, 5, 0, 851978, 5, 0, 851979, 5, 0, 851980, 5, 0, 851981, 5, 0, 851982, 5, 0, 851983, 5, 0, 851984, 5, 0, 851985, 5, 0, 851986, 5, 0, 851987, 5, 0, 851988, 5, 0, 851989, 5, 0, 851990, 5, 0, 851991, 5, 0, 851992, 5, 0, 851993, 5, 0, 851994, 5, 0, 851999, 4, 0, 983039, 4, 0, 917531, 5, 0, 917535, 4, 0, 1048575, 4, 0, 983071, 4, 0, 1114111, 4, 0, 1048579, 8, 0, 1048584, 536870920, 0, 1048586, 8, 0, 1048591, 536870920, 0, 1048594, 8, 0, 1048600, 536870920, 0, 1048607, 4, 0, 1179647, 4, 0, 1114112, 4, 0, 1114113, 4, 0, 1114114, 4, 0, 1114115, 4, 0, 1114116, 4, 0, 1114117, 4, 0, 1114118, 4, 0, 1114119, 4, 0, 1114120, 4, 0, 1114121, 4, 0, 1114122, 4, 0, 1114123, 4, 0, 1114124, 4, 0, 1114125, 4, 0, 1114126, 4, 0, 1114127, 4, 0, 1114128, 4, 0, 1114129, 4, 0, 1114130, 4, 0, 1114131, 4, 0, 1114132, 4, 0, 1114133, 4, 0, 1114134, 4, 0, 1114135, 4, 0, 1114136, 4, 0, 1114137, 4, 0, 1114138, 4, 0, 1114139, 4, 0, 1114140, 4, 0, 1114141, 4, 0, 1114142, 4, 0, 1114143, 4, 0 )
-_sections_unfolded = [ "Cell" ]
 
-[node name="jugador" parent="." index="1" instance=ExtResource( 2 )]
-
+[node name="jugador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 6, 263 )
 
-[node name="laser" type="Node" parent="." index="2"]
+[node name="laser" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="laser" parent="laser" index="0" instance=ExtResource( 3 )]
-
+[node name="laser" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 64, 256 )
 
-[node name="laser2" parent="laser" index="1" instance=ExtResource( 3 )]
-
+[node name="laser2" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 80, 256 )
 
-[node name="laser3" parent="laser" index="2" instance=ExtResource( 3 )]
-
+[node name="laser3" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 96, 256 )
 
-[node name="laser4" parent="laser" index="3" instance=ExtResource( 3 )]
-
+[node name="laser4" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 112, 256 )
 
-[node name="laser5" parent="laser" index="4" instance=ExtResource( 3 )]
-
+[node name="laser5" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 176, 256 )
 
-[node name="laser6" parent="laser" index="5" instance=ExtResource( 3 )]
-
+[node name="laser6" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 192, 256 )
 
-[node name="laser7" parent="laser" index="6" instance=ExtResource( 3 )]
-
+[node name="laser7" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 208, 256 )
 
-[node name="laser8" parent="laser" index="7" instance=ExtResource( 3 )]
-
+[node name="laser8" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 224, 256 )
 
-[node name="laser9" parent="laser" index="8" instance=ExtResource( 3 )]
-
+[node name="laser9" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 320, 256 )
 
-[node name="laser10" parent="laser" index="9" instance=ExtResource( 3 )]
-
+[node name="laser10" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 336, 256 )
 
-[node name="laser11" parent="laser" index="10" instance=ExtResource( 3 )]
-
+[node name="laser11" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 352, 256 )
 
-[node name="laser12" parent="laser" index="11" instance=ExtResource( 3 )]
-
+[node name="laser12" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 368, 256 )
 
-[node name="laser13" parent="laser" index="12" instance=ExtResource( 3 )]
-
+[node name="laser13" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 304, 256 )
 
-[node name="laser14" parent="laser" index="13" instance=ExtResource( 3 )]
-
+[node name="laser14" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 352, 192 )
 
-[node name="laser15" parent="laser" index="14" instance=ExtResource( 3 )]
-
+[node name="laser15" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 336, 192 )
 
-[node name="laser16" parent="laser" index="15" instance=ExtResource( 3 )]
-
+[node name="laser16" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 320, 192 )
 
-[node name="laser17" parent="laser" index="16" instance=ExtResource( 3 )]
-
+[node name="laser17" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 304, 192 )
 
-[node name="laser18" parent="laser" index="17" instance=ExtResource( 3 )]
-
+[node name="laser18" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 272, 192 )
 
-[node name="laser19" parent="laser" index="18" instance=ExtResource( 3 )]
-
+[node name="laser19" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 288, 192 )
 
-[node name="laser20" parent="laser" index="19" instance=ExtResource( 3 )]
-
+[node name="laser20" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 192, 192 )
 
-[node name="laser21" parent="laser" index="20" instance=ExtResource( 3 )]
-
+[node name="laser21" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 176, 192 )
 
-[node name="laser22" parent="laser" index="21" instance=ExtResource( 3 )]
-
+[node name="laser22" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 160, 192 )
 
-[node name="laser23" parent="laser" index="22" instance=ExtResource( 3 )]
-
+[node name="laser23" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 144, 192 )
 
-[node name="laser24" parent="laser" index="23" instance=ExtResource( 3 )]
-
+[node name="laser24" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 128, 192 )
 
-[node name="laser25" parent="laser" index="24" instance=ExtResource( 3 )]
-
+[node name="laser25" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 112, 192 )
 
-[node name="laser26" parent="laser" index="25" instance=ExtResource( 3 )]
-
+[node name="laser26" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 112, 128 )
 
-[node name="laser27" parent="laser" index="26" instance=ExtResource( 3 )]
-
+[node name="laser27" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 128, 128 )
 
-[node name="laser28" parent="laser" index="27" instance=ExtResource( 3 )]
-
+[node name="laser28" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 144, 128 )
 
-[node name="laser29" parent="laser" index="28" instance=ExtResource( 3 )]
-
+[node name="laser29" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 160, 128 )
 
-[node name="laser30" parent="laser" index="29" instance=ExtResource( 3 )]
-
+[node name="laser30" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 176, 128 )
 
-[node name="laser31" parent="laser" index="30" instance=ExtResource( 3 )]
-
+[node name="laser31" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 192, 128 )
 
-[node name="laser32" parent="laser" index="31" instance=ExtResource( 3 )]
-
+[node name="laser32" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 272, 128 )
 
-[node name="laser33" parent="laser" index="32" instance=ExtResource( 3 )]
-
+[node name="laser33" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 288, 128 )
 
-[node name="laser34" parent="laser" index="33" instance=ExtResource( 3 )]
-
+[node name="laser34" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 304, 128 )
 
-[node name="laser35" parent="laser" index="34" instance=ExtResource( 3 )]
-
+[node name="laser35" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 320, 128 )
 
-[node name="laser36" parent="laser" index="35" instance=ExtResource( 3 )]
-
+[node name="laser36" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 336, 128 )
 
-[node name="laser37" parent="laser" index="36" instance=ExtResource( 3 )]
-
+[node name="laser37" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 352, 128 )
 
-[node name="laser38" parent="laser" index="37" instance=ExtResource( 3 )]
-
+[node name="laser38" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 368, 64 )
 
-[node name="laser39" parent="laser" index="38" instance=ExtResource( 3 )]
-
+[node name="laser39" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 352, 64 )
 
-[node name="laser40" parent="laser" index="39" instance=ExtResource( 3 )]
-
+[node name="laser40" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 336, 64 )
 
-[node name="laser41" parent="laser" index="40" instance=ExtResource( 3 )]
-
+[node name="laser41" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 320, 64 )
 
-[node name="laser42" parent="laser" index="41" instance=ExtResource( 3 )]
-
+[node name="laser42" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 304, 64 )
 
-[node name="laser43" parent="laser" index="42" instance=ExtResource( 3 )]
-
+[node name="laser43" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 288, 64 )
 
-[node name="laser44" parent="laser" index="43" instance=ExtResource( 3 )]
-
+[node name="laser44" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 272, 64 )
 
-[node name="laser45" parent="laser" index="44" instance=ExtResource( 3 )]
-
+[node name="laser45" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 256, 64 )
 
-[node name="laser46" parent="laser" index="45" instance=ExtResource( 3 )]
-
+[node name="laser46" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 192, 64 )
 
-[node name="laser47" parent="laser" index="46" instance=ExtResource( 3 )]
-
+[node name="laser47" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 176, 64 )
 
-[node name="laser48" parent="laser" index="47" instance=ExtResource( 3 )]
-
+[node name="laser48" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 160, 64 )
 
-[node name="laser49" parent="laser" index="48" instance=ExtResource( 3 )]
-
+[node name="laser49" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 144, 64 )
 
-[node name="laser50" parent="laser" index="49" instance=ExtResource( 3 )]
-
+[node name="laser50" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 128, 64 )
 
-[node name="laser51" parent="laser" index="50" instance=ExtResource( 3 )]
-
+[node name="laser51" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 112, 64 )
 
-[node name="laser52" parent="laser" index="51" instance=ExtResource( 3 )]
-
+[node name="laser52" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 96, 64 )
 
-[node name="laser53" parent="laser" index="52" instance=ExtResource( 3 )]
-
+[node name="laser53" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 80, 64 )
 
-[node name="laser54" parent="laser" index="53" instance=ExtResource( 3 )]
-
+[node name="laser54" parent="laser" instance=ExtResource( 3 )]
 position = Vector2( 80, 64 )
 
-[node name="puas" type="Node" parent="." index="3"]
+[node name="puas" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="pua" parent="puas" index="0" instance=ExtResource( 4 )]
-
+[node name="pua" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 208, 192 )
 
-[node name="pua2" parent="puas" index="1" instance=ExtResource( 4 )]
-
+[node name="pua2" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 256, 192 )
 
-[node name="pua3" parent="puas" index="2" instance=ExtResource( 4 )]
-
+[node name="pua3" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 288, 256 )
 
-[node name="pua4" parent="puas" index="3" instance=ExtResource( 4 )]
-
+[node name="pua4" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 240, 128 )
 
-[node name="pua5" parent="puas" index="4" instance=ExtResource( 4 )]
-
+[node name="pua5" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 224, 128 )
 
-[node name="pua6" parent="puas" index="5" instance=ExtResource( 4 )]
-
+[node name="pua6" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 368, 128 )
 
-[node name="pua7" parent="puas" index="6" instance=ExtResource( 4 )]
-
+[node name="pua7" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 384, 128 )
 
-[node name="pua8" parent="puas" index="7" instance=ExtResource( 4 )]
-
+[node name="pua8" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 352, 64 )
 
-[node name="pua9" parent="puas" index="8" instance=ExtResource( 4 )]
-
+[node name="pua9" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 336, 64 )
 
-[node name="pua10" parent="puas" index="9" instance=ExtResource( 4 )]
-
+[node name="pua10" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 272, 64 )
 
-[node name="pua11" parent="puas" index="10" instance=ExtResource( 4 )]
-
+[node name="pua11" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 288, 64 )
 
-[node name="pua12" parent="puas" index="11" instance=ExtResource( 4 )]
-
+[node name="pua12" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 176, 64 )
 
-[node name="pua13" parent="puas" index="12" instance=ExtResource( 4 )]
-
+[node name="pua13" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 160, 64 )
 
-[node name="pua14" parent="puas" index="13" instance=ExtResource( 4 )]
-
+[node name="pua14" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 96, 64 )
 
-[node name="pua15" parent="puas" index="14" instance=ExtResource( 4 )]
-
+[node name="pua15" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 112, 64 )
 
-[node name="pua16" parent="puas" index="15" instance=ExtResource( 4 )]
-
+[node name="pua16" parent="puas" instance=ExtResource( 4 )]
 position = Vector2( 112, 64 )
 
-[node name="monedas" type="Node" parent="." index="4"]
+[node name="monedas" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="moneda" parent="monedas" index="0" instance=ExtResource( 5 )]
-
+[node name="moneda" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 48, 224 )
 
-[node name="moneda2" parent="monedas" index="1" instance=ExtResource( 5 )]
-
+[node name="moneda2" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 80, 224 )
 
-[node name="moneda3" parent="monedas" index="2" instance=ExtResource( 5 )]
-
+[node name="moneda3" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 128, 224 )
 
-[node name="moneda4" parent="monedas" index="3" instance=ExtResource( 5 )]
-
+[node name="moneda4" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 176, 224 )
 
-[node name="moneda5" parent="monedas" index="4" instance=ExtResource( 5 )]
-
+[node name="moneda5" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 208, 256 )
 
-[node name="moneda6" parent="monedas" index="5" instance=ExtResource( 5 )]
-
+[node name="moneda6" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 304, 256 )
 
-[node name="moneda7" parent="monedas" index="6" instance=ExtResource( 5 )]
-
+[node name="moneda7" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 336, 224 )
 
-[node name="moneda8" parent="monedas" index="7" instance=ExtResource( 5 )]
-
+[node name="moneda8" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 240, 192 )
 
-[node name="moneda9" parent="monedas" index="8" instance=ExtResource( 5 )]
-
+[node name="moneda9" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 224, 192 )
 
-[node name="moneda10" parent="monedas" index="9" instance=ExtResource( 5 )]
-
+[node name="moneda10" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 208, 128 )
 
-[node name="moneda11" parent="monedas" index="10" instance=ExtResource( 5 )]
-
+[node name="moneda11" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 256, 128 )
 
-[node name="moneda12" parent="monedas" index="11" instance=ExtResource( 5 )]
-
+[node name="moneda12" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 320, 96 )
 
-[node name="moneda13" parent="monedas" index="12" instance=ExtResource( 5 )]
-
+[node name="moneda13" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 144, 96 )
 
-[node name="moneda14" parent="monedas" index="13" instance=ExtResource( 5 )]
-
+[node name="moneda14" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 320, 64 )
 
-[node name="moneda15" parent="monedas" index="14" instance=ExtResource( 5 )]
-
+[node name="moneda15" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 304, 64 )
 
-[node name="moneda16" parent="monedas" index="15" instance=ExtResource( 5 )]
-
+[node name="moneda16" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 224, 64 )
 
-[node name="moneda17" parent="monedas" index="16" instance=ExtResource( 5 )]
-
+[node name="moneda17" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 128, 64 )
 
-[node name="moneda18" parent="monedas" index="17" instance=ExtResource( 5 )]
-
+[node name="moneda18" parent="monedas" instance=ExtResource( 5 )]
 position = Vector2( 144, 64 )
 
-[node name="cambiarNivel" parent="." index="5" instance=ExtResource( 6 )]
-
+[node name="cambiarNivel" parent="." instance=ExtResource( 6 )]
 position = Vector2( 8, 40 )
 next_level = ExtResource( 7 )
 
-[node name="Camera2D" type="Camera2D" parent="." index="6"]
-
+[node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-rotating = false
-current = false
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-
-

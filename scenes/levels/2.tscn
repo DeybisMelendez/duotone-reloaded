@@ -7,209 +7,132 @@
 [ext_resource path="res://scenes/bodies/next_level/next_level.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/levels/3.tscn" type="PackedScene" id=6]
 
-[node name="2" type="Node" index="0"]
+[node name="2" type="Node"]
 
-[node name="TileMap2" type="TileMap" parent="." index="0"]
-
-mode = 0
+[node name="TileMap2" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
-cell_quadrant_size = 16
 cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-cell_half_offset = 2
-cell_tile_origin = 0
-cell_y_sort = false
-cell_clip_uv = false
-collision_use_kinematic = false
-collision_friction = 1.0
-collision_bounce = 0.0
-collision_layer = 1
-collision_mask = 1
-occluder_light_mask = 1
 format = 1
 tile_data = PoolIntArray( -131072, 1610612739, 0, -131071, 1610612736, 0, -131070, 1610612736, 0, -131069, 1610612736, 0, -131068, 1610612736, 0, -131067, -1073741821, 0, -65536, -1610612736, 0, -65531, -1073741824, 0, 0, -1610612736, 0, 1, 1610612738, 0, 5, -1073741823, 0, 6, 1610612736, 0, 7, 1610612736, 0, 8, 1610612736, 0, 9, 1610612736, 0, 10, 1610612736, 0, 11, 1610612736, 0, 12, 1610612736, 0, 13, 1610612736, 0, 14, 1610612736, 0, 15, 1610612736, 0, 16, 1610612736, 0, 17, 1610612736, 0, 18, 1610612736, 0, 19, 1610612736, 0, 20, 1610612736, 0, 21, 1610612736, 0, 22, 1610612736, 0, 23, -1073741821, 0, 27, 1610612739, 0, 28, 1610612736, 0, 29, 1610612736, 0, 30, -1073741821, 0, 65536, -1610612736, 0, 65541, 4, 0, 65553, 4, 0, 65559, -1073741823, 0, 65560, -1073741821, 0, 65562, 1610612739, 0, 65563, 1610612737, 0, 65566, -1073741823, 0, 65567, 1610612736, 0, 65568, 1610612736, 0, 131072, -1610612736, 0, 131077, 4, 0, 131089, 4, 0, 131096, -1073741823, 0, 131097, 1610612736, 0, 131098, 1610612737, 0, 196608, -1610612736, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 196616, 4, 0, 196617, 4, 0, 196621, 4, 0, 196625, 4, 0, 262144, -1610612736, 0, 262149, 4, 0, 262157, 4, 0, 262161, 4, 0, 262162, 4, 0, 262163, 4, 0, 262164, 4, 0, 327680, -1610612736, 0, 327685, 4, 0, 327693, 4, 0, 327701, 4, 0, 327709, 4, 0, 327710, 4, 0, 327711, 1, 0, 327712, 0, 0, 393216, -1610612736, 0, 393221, 4, 0, 393227, 4, 0, 393228, 4, 0, 393238, 4, 0, 393239, 4, 0, 393240, 4, 0, 393241, 4, 0, 393242, 4, 0, 393247, -1073741824, 0, 458752, -1610612736, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 458768, 4, 0, 458769, 4, 0, 458770, 4, 0, 458783, -1073741824, 0, 524288, -1610612736, 0, 524293, 4, 0, 524296, 4, 0, 524307, 4, 0, 524319, -1073741824, 0, 589824, -1610612736, 0, 589829, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 589850, 4, 0, 589851, 4, 0, 589855, -1073741824, 0, 655360, -1610612736, 0, 655365, 4, 0, 655388, 4, 0, 655391, -1073741824, 0, 720896, -1610612736, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 720906, 4, 0, 720907, 4, 0, 720908, 4, 0, 720909, 4, 0, 720925, 4, 0, 720927, -1073741824, 0, 786432, -1610612736, 0, 786437, 4, 0, 786443, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 4, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 786452, 4, 0, 786453, 4, 0, 786454, 4, 0, 786462, 4, 0, 786463, -1073741824, 0, 851968, -1610612736, 0, 851969, 4, 0, 851970, 4, 0, 851973, 4, 0, 851979, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 851994, 4, 0, 851999, -1073741824, 0, 917504, -1610612736, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917535, -1073741824, 0, 983040, -1610612736, 0, 983048, 4, 0, 983054, 4, 0, 983059, 4, 0, 983071, -1073741824, 0, 1048576, -1610612736, 0, 1048584, 4, 0, 1048590, 4, 0, 1048595, 4, 0, 1048604, 4, 0, 1048607, -1073741824, 0, 1114112, -1610612733, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 3, 0 )
-_sections_unfolded = [ "Cell" ]
 
-[node name="jugador" parent="." index="1" instance=ExtResource( 2 )]
-
+[node name="jugador" parent="." instance=ExtResource( 2 )]
 position = Vector2( 25.8644, -8.69614 )
 
-[node name="puas" type="Node" parent="." index="2"]
+[node name="puas" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="pua" parent="puas" index="0" instance=ExtResource( 3 )]
-
+[node name="pua" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 64, 96 )
 
-[node name="pua2" parent="puas" index="1" instance=ExtResource( 3 )]
-
+[node name="pua2" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 16, 192 )
 
-[node name="pua3" parent="puas" index="2" instance=ExtResource( 3 )]
-
+[node name="pua3" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 32, 256 )
 
-[node name="pua4" parent="puas" index="3" instance=ExtResource( 3 )]
-
+[node name="pua4" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 48, 256 )
 
-[node name="pua5" parent="puas" index="4" instance=ExtResource( 3 )]
-
+[node name="pua5" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 16, 256 )
 
-[node name="pua6" parent="puas" index="5" instance=ExtResource( 3 )]
-
+[node name="pua6" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 64, 256 )
 
-[node name="pua7" parent="puas" index="6" instance=ExtResource( 3 )]
-
+[node name="pua7" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 48, 96 )
 
-[node name="pua8" parent="puas" index="7" instance=ExtResource( 3 )]
-
+[node name="pua8" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 32, 192 )
 
-[node name="pua9" parent="puas" index="8" instance=ExtResource( 3 )]
-
+[node name="pua9" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 112, 256 )
 
-[node name="pua10" parent="puas" index="9" instance=ExtResource( 3 )]
-
+[node name="pua10" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 144, 256 )
 
-[node name="pua11" parent="puas" index="10" instance=ExtResource( 3 )]
-
+[node name="pua11" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 208, 256 )
 
-[node name="pua12" parent="puas" index="11" instance=ExtResource( 3 )]
-
+[node name="pua12" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 240, 256 )
 
-[node name="pua13" parent="puas" index="12" instance=ExtResource( 3 )]
-
+[node name="pua13" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 288, 256 )
 
-[node name="pua14" parent="puas" index="13" instance=ExtResource( 3 )]
-
+[node name="pua14" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 320, 256 )
 
-[node name="pua15" parent="puas" index="14" instance=ExtResource( 3 )]
-
+[node name="pua15" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 448, 144 )
 
-[node name="pua16" parent="puas" index="15" instance=ExtResource( 3 )]
-
+[node name="pua16" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 304, 112 )
 
-[node name="pua17" parent="puas" index="16" instance=ExtResource( 3 )]
-
+[node name="pua17" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 160, 96 )
 
-[node name="pua18" parent="puas" index="17" instance=ExtResource( 3 )]
-
+[node name="pua18" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 352, 80 )
 
-[node name="pua19" parent="puas" index="18" instance=ExtResource( 3 )]
-
+[node name="pua19" parent="puas" instance=ExtResource( 3 )]
 position = Vector2( 336, 64 )
 
-[node name="monedas" type="Node" parent="." index="3"]
+[node name="monedas" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="moneda" parent="monedas" index="0" instance=ExtResource( 4 )]
-
+[node name="moneda" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 48, 64 )
 
-[node name="moneda2" parent="monedas" index="1" instance=ExtResource( 4 )]
-
+[node name="moneda2" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 32, 160 )
 
-[node name="moneda3" parent="monedas" index="2" instance=ExtResource( 4 )]
-
+[node name="moneda3" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 176, 224 )
 
-[node name="moneda4" parent="monedas" index="3" instance=ExtResource( 4 )]
-
+[node name="moneda4" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 240, 208 )
 
-[node name="moneda5" parent="monedas" index="4" instance=ExtResource( 4 )]
-
+[node name="moneda5" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 256, 208 )
 
-[node name="moneda6" parent="monedas" index="5" instance=ExtResource( 4 )]
-
+[node name="moneda6" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 384, 240 )
 
-[node name="moneda7" parent="monedas" index="6" instance=ExtResource( 4 )]
-
+[node name="moneda7" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 368, 240 )
 
-[node name="moneda8" parent="monedas" index="7" instance=ExtResource( 4 )]
-
+[node name="moneda8" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 400, 240 )
 
-[node name="moneda9" parent="monedas" index="8" instance=ExtResource( 4 )]
-
+[node name="moneda9" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 480, 176 )
 
-[node name="moneda10" parent="monedas" index="9" instance=ExtResource( 4 )]
-
+[node name="moneda10" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 464, 160 )
 
-[node name="moneda11" parent="monedas" index="10" instance=ExtResource( 4 )]
-
+[node name="moneda11" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 144, 96 )
 
-[node name="moneda12" parent="monedas" index="11" instance=ExtResource( 4 )]
-
+[node name="moneda12" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 96, 32 )
 
-[node name="moneda13" parent="monedas" index="12" instance=ExtResource( 4 )]
-
+[node name="moneda13" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 208, 96 )
 
-[node name="moneda14" parent="monedas" index="13" instance=ExtResource( 4 )]
-
+[node name="moneda14" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 288, 48 )
 
-[node name="moneda15" parent="monedas" index="14" instance=ExtResource( 4 )]
-
+[node name="moneda15" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 304, 48 )
 
-[node name="moneda16" parent="monedas" index="15" instance=ExtResource( 4 )]
-
+[node name="moneda16" parent="monedas" instance=ExtResource( 4 )]
 position = Vector2( 320, 48 )
 
-[node name="cambiarNivel" parent="." index="4" instance=ExtResource( 5 )]
-
+[node name="cambiarNivel" parent="." instance=ExtResource( 5 )]
 position = Vector2( 504, 40 )
 next_level = ExtResource( 6 )
 
-[node name="Camera2D" type="Camera2D" parent="." index="5"]
-
+[node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
-rotating = false
-current = false
-zoom = Vector2( 1, 1 )
-limit_left = -10000000
-limit_top = -10000000
-limit_right = 10000000
-limit_bottom = 10000000
-limit_smoothed = false
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
-smoothing_enabled = false
-smoothing_speed = 5.0
-offset_v = 0.0
-offset_h = 0.0
-drag_margin_left = 0.2
-drag_margin_top = 0.2
-drag_margin_right = 0.2
-drag_margin_bottom = 0.2
-editor_draw_screen = true
-editor_draw_limits = false
-editor_draw_drag_margin = false
-
-

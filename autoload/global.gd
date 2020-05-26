@@ -3,7 +3,7 @@ extends CanvasLayer
 var deads = 0
 var mode = "easy"
 var coins = 0
-var can_pause = false # Esto es para que no se pueda pausar en los menus
+var can_pause = false
 var spawn_position = null
 var coins_taken = []
 var saves_count = 0
@@ -32,7 +32,6 @@ func transition_reload():
 	yield($transition,"animation_finished")
 	get_tree().reload_current_scene()
 	$transition.play("fade_in")
-	
 func restart_stats():
 		deads = 0
 		coins = 0
