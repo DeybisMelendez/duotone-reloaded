@@ -6,7 +6,7 @@ func _ready():
 	global.restart_stats()
 	global.load_game()
 	if get_tree().paused:
-		global.get_node("music").play()
+#		global.get_node("music").play()
 		get_tree().paused = false
 	if global.record.size() > 0:
 		$record.set_text("Max record: Saves: " + str(global.record[0]) + ", Deaths: " + str(global.record[1]))

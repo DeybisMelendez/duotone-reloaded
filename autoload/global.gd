@@ -15,23 +15,25 @@ var record = []
 
 func pause_game():
 		if get_tree().paused:
-			$music.play()
+			$music.set_volume_db(0)
 			get_tree().paused = false
 		else:
 			get_tree().paused = true
-			$music.stop()
+			$music.set_volume_db(-20)
 
 func transition_game(scene):
 	$transition.play("fade_out")
 	yield($transition,"animation_finished")
 	get_tree().change_scene_to(scene)
 	$transition.play("fade_in")
+	$music.set_volume_db(0)
 
 func transition_reload():
 	$transition.play("fade_out")
 	yield($transition,"animation_finished")
 	get_tree().reload_current_scene()
 	$transition.play("fade_in")
+	$music.set_volume_db(0)
 func restart_stats():
 		deads = 0
 		coins = 0
