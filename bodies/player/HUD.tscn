@@ -13,13 +13,13 @@
 [ext_resource path="res://assets/fonts/DigitalDisco.ttf" type="DynamicFontData" id=11]
 [ext_resource path="res://assets/fonts/DigitalDiscoThin.ttf" type="DynamicFontData" id=12]
 
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 12 )
+
 [sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=3]
-font_data = ExtResource( 12 )
-
-[sub_resource type="DynamicFont" id=4]
 size = 32
 font_data = ExtResource( 11 )
 
@@ -43,7 +43,7 @@ margin_left = 120.0
 margin_top = 8.0
 margin_right = 184.0
 margin_bottom = 24.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Deaths: 0"
@@ -53,7 +53,7 @@ margin_left = 204.0
 margin_top = 8.0
 margin_right = 246.0
 margin_bottom = 24.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Level: "
@@ -63,7 +63,7 @@ margin_left = 266.0
 margin_top = 8.0
 margin_right = 311.0
 margin_bottom = 24.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Coins: "
@@ -73,7 +73,7 @@ margin_left = 331.0
 margin_top = 8.0
 margin_right = 391.0
 margin_bottom = 24.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Saves: 0"
@@ -128,7 +128,7 @@ visibility_mode = 1
 anchor_right = 1.0
 margin_top = 48.0
 margin_bottom = 62.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Your position has been saved"
@@ -167,7 +167,7 @@ alignment = 1
 margin_top = 102.0
 margin_right = 512.0
 margin_bottom = 134.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "PAUSE"
@@ -190,7 +190,7 @@ stretch_mode = 5
 [node name="Label2" type="Label" parent="Popup/CenterContainer/HBoxContainer/resume"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Play"
@@ -211,7 +211,7 @@ stretch_mode = 5
 [node name="Label2" type="Label" parent="Popup/CenterContainer/HBoxContainer/restart"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Restart"
@@ -229,7 +229,7 @@ stretch_mode = 5
 [node name="Label2" type="Label" parent="Popup/CenterContainer/HBoxContainer/menu"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Menu"
@@ -247,7 +247,7 @@ stretch_mode = 5
 [node name="Label2" type="Label" parent="Popup/CenterContainer/HBoxContainer/exit"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.984314, 0.956863, 0.937255, 1 )
 custom_colors/font_color_shadow = Color( 0.286275, 0.301961, 0.494118, 1 )
 text = "Exit"

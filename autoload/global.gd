@@ -9,9 +9,9 @@ var coins_taken = []
 var saves_count = 0
 var record = []
 
-func _input(event):
-	if Input.is_action_just_pressed("pause") and can_pause:
-		pause_game()
+#func _input(event):
+#	if Input.is_action_just_pressed("pause") and can_pause:
+#		pause_game()
 
 func pause_game():
 		if get_tree().paused:

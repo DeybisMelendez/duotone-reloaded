@@ -4,8 +4,8 @@ var coins = 0
 var show = false
 
 func _ready():
-	if !OS.has_touchscreen_ui_hint(): #Eliminamos el boton pausa si no tiene touchscreen
-		$pause.queue_free()
+#	if !OS.has_touchscreen_ui_hint(): #Eliminamos el boton pausa si no tiene touchscreen
+#		$pause.hide()
 	$Label.hide()
 	if global.mode != "easy":
 		$HBoxContainer/saves.queue_free()
@@ -86,3 +86,10 @@ func _on_restart_button_up():
 	global.coins_taken = []
 	global.spawn_position = null
 	global.pause_game()
+
+func _input(event):
+	if Input.is_action_just_pressed("pause") and global.can_pause:
+		if get_tree().paused:
+			_on_resume_button_up()
+		else:
+			_on_pause_button_up()
