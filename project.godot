@@ -16,9 +16,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Duotone Reloaded"
-run/main_scene="res://scenes/ui/menu.tscn"
+run/main_scene="res://scenes/main/Main.tscn"
 boot_splash/image="res://splash.png"
-config/icon="res://icon_android.png"
+config/icon="res://android/icon_android.png"
 config/quit_on_go_back=false
 
 [autoload]

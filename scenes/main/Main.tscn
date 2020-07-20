@@ -1,0 +1,177 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/main/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/levels/start.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/fonts/DigitalDisco.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/fonts/DigitalDiscoThin.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/images/ui/button1.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/ui/button2.png" type="Texture" id=6]
+[ext_resource path="res://assets/tilemap/new_tiles.tres" type="TileSet" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 4 )
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+game = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 84.0
+margin_top = 60.0
+margin_right = 428.0
+margin_bottom = 228.0
+alignment = 1
+
+[node name="title" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 344.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Duotone"
+align = 1
+valign = 1
+
+[node name="title2" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 344.0
+margin_bottom = 116.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Reloaded"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 120.0
+margin_right = 344.0
+margin_bottom = 168.0
+alignment = 1
+
+[node name="hard" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_right = 112.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 112, 48 )
+focus_neighbour_bottom = NodePath("../start2")
+action_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/hard"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Hard"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="normal" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 116.0
+margin_right = 228.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 112, 48 )
+focus_neighbour_bottom = NodePath("../start2")
+action_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/normal"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Normal"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="noob" type="TextureButton" parent="CenterContainer/VBoxContainer/HBoxContainer"]
+margin_left = 232.0
+margin_right = 344.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 112, 48 )
+focus_neighbour_bottom = NodePath("../start2")
+action_mode = 0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/HBoxContainer/noob"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Noob"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -32.0
+margin_bottom = -16.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+text = "Game by Deybis Melendez, Version 1.0.0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="record" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = -288.0
+margin_right = -8.0
+margin_bottom = -272.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 9, 4, 0, 10, 4, 0, 11, 4, 0, 12, 4, 0, 13, 4, 0, 14, 4, 0, 15, 4, 0, 16, 4, 0, 17, 4, 0, 18, 4, 0, 19, 4, 0, 20, 4, 0, 21, 4, 0, 22, 4, 0, 23, 4, 0, 24, 4, 0, 25, 4, 0, 26, 4, 0, 27, 4, 0, 28, 4, 0, 29, 4, 0, 30, 4, 0, 31, 4, 0, 1114112, 0, 0, 1114113, 0, 0, 1114114, 0, 0, 1114115, 0, 0, 1114116, 0, 0, 1114117, 0, 0, 1114118, 0, 0, 1114119, 0, 0, 1114120, 0, 0, 1114121, 0, 0, 1114122, 0, 0, 1114123, 0, 0, 1114124, 0, 0, 1114125, 0, 0, 1114126, 0, 0, 1114127, 0, 0, 1114128, 0, 0, 1114129, 0, 0, 1114130, 0, 0, 1114131, 0, 0, 1114132, 0, 0, 1114133, 0, 0, 1114134, 0, 0, 1114135, 0, 0, 1114136, 0, 0, 1114137, 0, 0, 1114138, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0 )
+[connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/hard" to="." method="_on_hard_button_up"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/normal" to="." method="_on_normal_button_up"]
+[connection signal="button_up" from="CenterContainer/VBoxContainer/HBoxContainer/noob" to="." method="_on_noob_button_up"]
