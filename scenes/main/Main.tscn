@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scenes/main/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/levels/start.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/images/ui/button1.png" type="Texture" id=5]
 [ext_resource path="res://assets/images/ui/button2.png" type="Texture" id=6]
 [ext_resource path="res://assets/tilemap/new_tiles.tres" type="TileSet" id=7]
+[ext_resource path="res://addons/kofi-donation-button/KofiButton.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -41,9 +42,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 84.0
-margin_top = 60.0
+margin_top = 42.0
 margin_right = 428.0
-margin_bottom = 228.0
+margin_bottom = 246.0
 alignment = 1
 
 [node name="title" type="Label" parent="CenterContainer/VBoxContainer"]
@@ -138,6 +139,15 @@ custom_colors/font_color = Color( 0.984314, 0.960784, 0.937255, 1 )
 text = "Noob"
 align = 1
 valign = 1
+
+[node name="KofiButton" parent="CenterContainer/VBoxContainer" instance=ExtResource( 8 )]
+margin_top = 172.0
+margin_right = 344.0
+margin_bottom = 204.0
+color = 0
+text = "Support me on Ko-fi"
+show_text = true
+kofi_page = ""
 
 [node name="Label" type="Label" parent="."]
 anchor_top = 1.0
