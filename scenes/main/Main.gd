@@ -24,3 +24,7 @@ func _on_noob_button_up():
 
 func _on_hard_button_up():
 	start_game(game, "hard")
+
+
+func _on_Apps_button_up():
+	OS.shell_open("https://play.google.com/store/apps/details?id=com.damv.duotone_reloaded_free")
